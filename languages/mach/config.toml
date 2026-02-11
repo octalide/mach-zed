@@ -2,7 +2,6 @@ name = "Mach"
 grammar = "mach"
 path_suffixes = ["mach"]
 line_comments = ["# "]
-block_comment = false
 
 tab_size = 4
 hard_tabs = false

@@ -47,13 +47,13 @@ You can customize Mach-specific editor settings in your Zed `settings.json`:
 
 ```json
 {
-  "languages": {
-    "Mach": {
-      "tab_size": 4,
-      "hard_tabs": false,
-      "format_on_save": "off"
+    "languages": {
+        "Mach": {
+            "tab_size": 4,
+            "hard_tabs": false,
+            "format_on_save": "off"
+        }
     }
-  }
 }
 ```
 
