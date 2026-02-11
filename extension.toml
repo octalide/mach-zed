@@ -11,6 +11,8 @@ repository = "https://github.com/octalide/mach-zed"
 repository = "file:///opt/dev/src/github.com/octalide/mach-tree-sitter"
 rev = "bbfae43619b361c33b77311477151cab7218b06d"
 
-[language_servers.mach-lsp]
-name = "Mach Language Server"
-languages = ["Mach"]
+# LSP support requires a Rust WASM extension (Cargo.toml + src/lib.rs) to
+# implement language_server_command. Uncomment once that is wired up.
+# [language_servers.mach-lsp]
+# name = "Mach Language Server"
+# languages = ["Mach"]
