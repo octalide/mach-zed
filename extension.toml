@@ -7,7 +7,7 @@ description = "Mach language support for Zed — syntax highlighting, indentatio
 repository = "https://github.com/octalide/mach-zed"
 
 [grammars.mach]
-repository = "file:///D:/src/github.com/octalide/mach-tree-sitter"
+repository = "https://github.com/octalide/mach-tree-sitter"
 rev = "bbfae43619b361c33b77311477151cab7218b06d"
 
 # LSP support requires a Rust WASM extension (Cargo.toml + src/lib.rs) to
