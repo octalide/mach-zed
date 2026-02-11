@@ -12,3 +12,7 @@ Thumbs.db
 # Zed extension build artifacts
 *.wasm
 /grammars/
+
+# Rust / Cargo
+/target/
+Cargo.lock
