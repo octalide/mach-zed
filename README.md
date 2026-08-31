@@ -166,6 +166,12 @@ If none of these succeed, Zed shows an error message guiding the user to install
 > - Comptime variadic packs — `(pack_parameter name: (identifier))` for `va: ...`,
 >   the `$each a in va { ... }` unroll (`comptime_each_statement`, `$`/`each`/`in`
 >   keywords), and the `va...` `pack_spread_expression` ellipsis.
+> - Secret values: `^T` is a `secret_type` with its marker highlighted as a type
+>   qualifier, while `value:^T` is a `secret_strip_expression` with its operator
+>   highlighted as an operator.
+> - `#[attr]` annotations: both `#[` and `]` are `punctuation.special`. The
+>   decorator query follows the broad bracket captures so they do not overwrite
+>   the closing delimiter's annotation highlight.
 >
 > Note `pub` / `ext` are repeatable `modifiers` children of each declaration
 > (there is no `public_declaration` or `extern_declaration` node), and there is
