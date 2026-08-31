@@ -64,11 +64,6 @@
 (generic_type
   name: (type_identifier) @type)
 
-; #[attr] decorators — #[symbol("...")], #[inline], #[align(expr)], #[section], #[library]
-(decorator
-  "#[" @punctuation.special
-  name: (identifier) @attribute)
-
 ; functions
 (function_declaration
   name: (identifier) @function)
@@ -193,6 +188,13 @@
 (cast_expression
   operator: _ @operator)
 
+; secret qualifier ( ^T ) and explicit secret stripping ( value:^T )
+(secret_type
+  marker: "^" @type.qualifier)
+
+(secret_strip_expression
+  operator: _ @operator)
+
 (assignment_expression
   "=" @operator)
 
@@ -212,3 +214,10 @@
 ":" @punctuation.delimiter
 "," @punctuation.delimiter
 "." @punctuation.delimiter
+
+; #[attr] decorators — #[symbol("...")], #[inline], #[align(expr)], #[section], #[library]
+; keep this after the broad bracket captures so both delimiters stay special
+(decorator
+  "#[" @punctuation.special
+  name: (identifier) @attribute
+  "]" @punctuation.special)
